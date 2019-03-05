@@ -17,30 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data: function () {
-    return {
-      recommendList: [{
-      	id: '0001',
-      	imgUrl: 'http://img1.qunarzz.com/sight/p0/1602/53/53cf6caed9f9b9ee90.img.jpg_200x200_f5476a84.jpg',
-      	title: '华清宫华清宫华清宫',
-      	desc: '华清宫华清宫华清宫华华清宫华华清宫华华清宫华清华清宫华清宫'
-  		}, {
-  	    id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1602/53/53cf6caed9f9b9ee90.img.jpg_200x200_f5476a84.jpg',
-  	    title: '华清宫华清宫华清宫',
-  	    desc: '华清宫华清宫华清宫华华清宫华华清宫华华清宫华清华清宫华清宫'
-  		}, {
-  	    id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1602/53/53cf6caed9f9b9ee90.img.jpg_200x200_f5476a84.jpg',
-        title: '华清宫华清宫华清宫',
-        desc: '华清宫华清宫华清宫华华清宫华华清宫华华清宫华清华清宫华清宫'
-  		}, {
-        id: '0004',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1602/53/53cf6caed9f9b9ee90.img.jpg_200x200_f5476a84.jpg',
-        title: '华清宫华清宫华清宫',
-        desc: '华清宫华清宫华清宫华华清宫华华清宫华华清宫华清华清宫华清宫'
-  		}]
-  	}
+  props: {
+    recommendList: Array
   }
 }
 </script>
