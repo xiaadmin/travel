@@ -19,29 +19,29 @@ export default {
   name: 'Home',
   components: {HomeHeader, HomeSwiper, HomeIcons, HomeRecommend, HomeWeekend},
   data: function () {
-  	return {
-  		swiperList: [],
-  		iconList: [],
-  		recommendList: [],
-  		weekendList: []
-  	}
+    return {
+      swiperList: [],
+      iconList: [],
+      recommendList: [],
+      weekendList: []
+    }
   },
   methods: {
-  	getHomeInfo: function () {
-  		axios.get('/api/index.json').then(this.getHomeInfoSucc)
-  	},
-  	getHomeInfoSucc: function (res) {
-  		res = res.data
-  		if (res.ret && res.data) {
-  			this.swiperList = res.data.swiperList
-  			this.iconList = res.data.iconList
-  			this.recommendList = res.data.recommendList
-  			this.weekendList = res.data.weekendList
-  		}
-  	}
+    getHomeInfo: function () {
+      axios.get('/api/index.json').then(this.getHomeInfoSucc)
+    },
+    getHomeInfoSucc: function (res) {
+      res = res.data
+      if (res.ret && res.data) {
+        this.swiperList = res.data.swiperList
+        this.iconList = res.data.iconList
+        this.recommendList = res.data.recommendList
+        this.weekendList = res.data.weekendList
+      }
+    }
   },
   mounted: function () {
-  	this.getHomeInfo()
+    this.getHomeInfo()
   }
 }
 </script>
