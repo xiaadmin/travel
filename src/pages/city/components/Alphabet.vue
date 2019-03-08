@@ -29,7 +29,6 @@ export default {
     right: 0
     bottom: 0
     width: .4rem
-    background: #999
     .item
       line-height: .4rem
       text-align: center
