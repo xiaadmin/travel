@@ -17,11 +17,13 @@ export default {
   data: function () {
     return {
       touchStatus: false,
-      startY: 0
+      startY: 0,
+      timer: null
     }
   },
   updated: function () {
     this.startY = this.$refs['A'][0].offsetTop
+    console.log(this.startY)
   },
   computed: {
     letters: function () {
@@ -44,11 +46,13 @@ export default {
         if (this.timer) {
           clearTimeout(this.timer)
         }
-        const touchY = e.touches[0].clientY - 79
-        const index = Math.floor((touchY - this.startY) / 20)
-        if (index >= 0 && index < this.letters.length) {
-          this.$emit('change', this.letters[index])
-        }
+        this.timer = setTimeout(() => {
+          const touchY = e.touches[0].clientY - 79
+          const index = Math.floor((touchY - this.startY) / 20)
+          if (index >= 0 && index < this.letters.length) {
+            this.$emit('change', this.letters[index])
+          }
+        }, 16)
       }
     },
     handleTouchEnd: function () {
