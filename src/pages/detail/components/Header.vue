@@ -23,6 +23,7 @@ export default {
   },
   methods: {
     HandleScroll: function () {
+      /* 页面滚动的距离 */
       let top = document.documentElement.scrollTop
       if (top > 60) {
         this.showAba = true
@@ -34,12 +35,18 @@ export default {
       }
     }
   },
-  activated: function () {
+  mounted () {
+    window.addEventListener('scroll', this.HandleScroll)
+  },
+  unmounted () {
+    window.removeEventListener('scroll', this.HandleScroll)
+  }
+  /* activated: function () {
     window.addEventListener('scroll', this.HandleScroll)
   },
   deactivated: function () {
     window.removeEventListener('scroll', this.HandleScroll)
-  }
+  } */
 }
 </script>
 

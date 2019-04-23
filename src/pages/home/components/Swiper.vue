@@ -32,6 +32,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+/* 设置轮播图小圆点的背景颜色 */
   .wrapper >>> .swiper-pagination-bullet-active
     background: #fff
   .wrapper

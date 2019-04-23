@@ -30,8 +30,10 @@ export default {
   computed: {
     pages: function () {
       const pages = []
+      /* 遍历iconList数组 */
       this.iconList.forEach(function (item, index) {
         const page = Math.floor(index / 8)
+        /* pages为二维数组 pages[0]和pages[1] */
         if (!pages[page]) {
           pages[page] = []
         }
